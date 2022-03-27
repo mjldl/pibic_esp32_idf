@@ -1,0 +1,21 @@
+Set up the environment variables: 
+. $HOME/esp/esp-idf/export.sh 
+
+Copy a project from examples:
+cd ~/esp
+cp -r $IDF_PATH/examples/get-started/hello_world .
+
+Connect your device and configure the project in the directory:
+cd ~/esp/hello_world
+idf.py set-target esp32
+idf.py menuconfig
+
+Build your project in the directory:
+idf.py build
+
+Write in the board:
+idf.py -p /dev/ttyUSB0 flash
+
+SERIAL UART:
+idf.py -p /dev/ttyUSB0 [-b BAUD] flash monitor
+
