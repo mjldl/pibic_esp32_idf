@@ -10,7 +10,7 @@
 
 /*===============================================*/
 /* --- Programa --- */
-static unint8_t s_led_state = 0;
+static unint8_t s_led_state = 0; 
 
 void app_main(void) 
 {
@@ -21,10 +21,9 @@ void app_main(void)
 		gpio_set_level(CONFIG_BLINK_GPIO, s_led_state);
 		s_led_state = !s_led_state
 		vTaskDelay(CONFIG_BLINK_PERIOD);
-	}
+	} /* end while */
 } /* end app_main */
 /*===============================================*/
-/* --- Desenvolvimento das funções --- */
+/* --- Desenvolvimento de funções --- */
 
 /*===============================================*/
-
